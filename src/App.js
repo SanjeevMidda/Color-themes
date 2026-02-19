@@ -29,17 +29,18 @@ function App() {
   ];
 
   // state to hold color selected
-  const [colorSelected, setColorSelected] = useState("white");
+  const [selectedColor, setSelectedColor] = useState("white");
 
   return (
-    <div className="App" style={{ backgroundColor: colorSelected }}>
+    <div className="App" style={{ backgroundColor: selectedColor }}>
       <div className="themeContainer">
         {colors.map((color) => {
           return (
             <button
               id={color.id}
               style={{ backgroundColor: color.color }}
-              onClick={() => setColorSelected(color.color)}
+              onClick={() => setSelectedColor(color.color)}
+              aria-label={`Select ${color.color} theme`}
             ></button>
           );
         })}
