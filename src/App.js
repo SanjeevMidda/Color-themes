@@ -9,16 +9,14 @@ function App() {
   return (
     <div className="App" style={{ backgroundColor: selectedColor }}>
       <div className="themeContainer">
-        {COLORS.map((c) => {
-          return (
-            <button
-              key={c}
-              style={{ "--bg-color": c }}
-              onClick={() => setSelectedColor(c)}
-              aria-label={`Select ${c.color} theme`}
-            ></button>
-          );
-        })}
+        {COLORS.map((c) => (
+          <button
+            key={c}
+            style={{ "--bg-color": c }}
+            onClick={() => setSelectedColor(c)}
+            aria-label={`Select ${c} theme`}
+          ></button>
+        ))}
       </div>
     </div>
   );
