@@ -2,9 +2,6 @@ import { useState } from "react";
 import "./index.css";
 
 function App() {
-  // colors
-  // const colors = ["red", "blue", "green", "orange", "grey"];
-
   const colors = [
     {
       id: 1,
@@ -38,7 +35,7 @@ function App() {
           return (
             <button
               key={color.id}
-              style={{ backgroundColor: color.color }}
+              style={{ "--bg-color": color.color }}
               onClick={() => setSelectedColor(color.color)}
               aria-label={`Select ${color.color} theme`}
             ></button>
