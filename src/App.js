@@ -8,11 +8,15 @@ function App() {
   // state to hold color selected
   const [colorSelected, setColorSelected] = useState("white");
 
-  // create background color for App
-
-  const backgroundColor = {};
-
-  return <div className="App" style={{ backgroundColor: colorSelected }}></div>;
+  return (
+    <div className="App" style={{ backgroundColor: colorSelected }}>
+      <div className="themeContainer">
+        {colors.map((color) => {
+          return <button style={{ backgroundColor: color }}></button>;
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default App;
