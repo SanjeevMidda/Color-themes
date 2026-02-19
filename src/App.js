@@ -1,28 +1,7 @@
 import { useState } from "react";
 import "./index.css";
 
-const COLORS = [
-  {
-    id: 1,
-    color: "red",
-  },
-  {
-    id: 2,
-    color: "blue",
-  },
-  {
-    id: 3,
-    color: "green",
-  },
-  {
-    id: 4,
-    color: "orange",
-  },
-  {
-    id: 5,
-    color: "grey",
-  },
-];
+const COLORS = ["red", "blue", "green", "orange", "grey"];
 
 function App() {
   const [selectedColor, setSelectedColor] = useState("white");
@@ -33,9 +12,9 @@ function App() {
         {COLORS.map((c) => {
           return (
             <button
-              key={c.id}
-              style={{ "--bg-color": c.color }}
-              onClick={() => setSelectedColor(c.color)}
+              key={c}
+              style={{ "--bg-color": c }}
+              onClick={() => setSelectedColor(c)}
               aria-label={`Select ${c.color} theme`}
             ></button>
           );
