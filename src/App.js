@@ -37,7 +37,7 @@ function App() {
         {colors.map((color) => {
           return (
             <button
-              id={color.id}
+              key={color.id}
               style={{ backgroundColor: color.color }}
               onClick={() => setSelectedColor(color.color)}
               aria-label={`Select ${color.color} theme`}
