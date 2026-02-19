@@ -7,9 +7,12 @@ function App() {
 
   // state to hold color selected
   const [colorSelected, setColorSelected] = useState("white");
+
   // create background color for App
 
-  return <div className="App">.colorContainer</div>;
+  const backgroundColor = {};
+
+  return <div className="App" style={{ backgroundColor: colorSelected }}></div>;
 }
 
 export default App;
