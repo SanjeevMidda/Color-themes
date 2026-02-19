@@ -12,7 +12,12 @@ function App() {
     <div className="App" style={{ backgroundColor: colorSelected }}>
       <div className="themeContainer">
         {colors.map((color) => {
-          return <button style={{ backgroundColor: color }}></button>;
+          return (
+            <button
+              style={{ backgroundColor: color }}
+              onClick={() => setColorSelected(color)}
+            ></button>
+          );
         })}
       </div>
     </div>
